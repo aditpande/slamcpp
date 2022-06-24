@@ -1,2 +1,3 @@
 # slamcpp
-SLAM in CPP
+
+SLAM in C++: Some notes for (visual) SLAM
