@@ -33,3 +33,4 @@
 
 build/
 p003_useEigen/thirdparty/
+.vscode/settings.json
