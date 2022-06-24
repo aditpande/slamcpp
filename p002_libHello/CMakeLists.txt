@@ -17,7 +17,6 @@ target_link_libraries(use_libHello PUBLIC
     hello
 )
 
-
 target_include_directories(use_libHello PUBLIC
     include
     ${PROJECT_SOURCE_DIR}/mylibs/hello/include

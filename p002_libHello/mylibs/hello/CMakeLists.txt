@@ -13,7 +13,7 @@ target_sources(hello PRIVATE
 )
 
 set_target_properties(hello PROPERTIES
-    PRIFIX lib
+    PREFIX lib
     OUTPUT_NAME hello
     SUFFIX ".a"
 )
