@@ -1,8 +1,9 @@
-#ifndef COMMONS_HPP
-#define COMMONS_HPP
+#pragma once
 
 #include <ctime>
 #include <iomanip>
 #include <iostream>
-
-#endif // COMMONS_HPP
+#include <vector>
+#include <Eigen/Core>
+#include <Eigen/Geometry>
+#include <pangolin/pangolin.h>

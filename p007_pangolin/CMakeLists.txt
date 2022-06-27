@@ -19,18 +19,36 @@ message("Pangolin_FOUND: ${Pangolin_FOUND}")
 message("Pangolin_DIR: ${Pangolin_DIR}")
 message("Pangolin_LIBRARIES: ${Pangolin_LIBRARIES}")
 
-# build executable
-add_executable(${PROJECT_NAME})
+# Vizualize Geometry: build executable
+add_executable(${PROJECT_NAME}_vizualize_geometry)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC
+target_link_libraries(${PROJECT_NAME}_vizualize_geometry PUBLIC
     ${Pangolin_LIBRARIES}
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE
+target_include_directories(${PROJECT_NAME}_vizualize_geometry PRIVATE
     include
     ${Eigen3_INCLUDE_DIR}
 )
 
-target_sources(${PROJECT_NAME} PRIVATE
-    src/main.cpp
+target_sources(${PROJECT_NAME}_vizualize_geometry PRIVATE
+    src/main_vizualize_geometry.cpp
+)
+
+
+# build executable
+add_executable(${PROJECT_NAME}_plot_trajectory)
+
+target_link_libraries(${PROJECT_NAME}_plot_trajectory PUBLIC
+    ${Pangolin_LIBRARIES}
+)
+
+target_include_directories(${PROJECT_NAME}_plot_trajectory PRIVATE
+    include
+    ${Eigen3_INCLUDE_DIR}
+)
+
+target_sources(${PROJECT_NAME}_plot_trajectory PRIVATE
+    src/main_plot_trajectory.cpp
+    src/plot_trajectory_utils.cpp
 )

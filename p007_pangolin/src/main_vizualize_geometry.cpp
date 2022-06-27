@@ -1,7 +1,4 @@
 #include "commons.hpp"
-#include <Eigen/Core>
-#include <Eigen/Geometry>
-#include <pangolin/pangolin.h>
 
 using namespace std;
 using namespace Eigen;
@@ -57,20 +54,14 @@ int main(int argc, char **argv) {
 
   const int UI_WIDTH = 500;
 
-  pangolin::View &d_cam =
-      pangolin::CreateDisplay()
-          .SetBounds(0.0, 1.0, pangolin::Attach::Pix(UI_WIDTH), 1.0,
-                     -1000.0f / 600.0f)
-          .SetHandler(new pangolin::Handler3D(s_cam));
+  pangolin::View &d_cam = pangolin::CreateDisplay().SetBounds(0.0, 1.0, pangolin::Attach::Pix(UI_WIDTH), 1.0, -1000.0f / 600.0f).SetHandler(new pangolin::Handler3D(s_cam));
 
   // ui
   pangolin::Var<RotationMatrix> rotation_matrix("ui.R", RotationMatrix());
-  pangolin::Var<TranslationVector> translation_vector("ui.t",
-                                                      TranslationVector());
+  pangolin::Var<TranslationVector> translation_vector("ui.t", TranslationVector());
   pangolin::Var<TranslationVector> euler_angles("ui.rpy", TranslationVector());
   pangolin::Var<QuaternionDraw> quaternion("ui.q", QuaternionDraw());
-  pangolin::CreatePanel("ui").SetBounds(0.0, 1.0, 0.0,
-                                        pangolin::Attach::Pix(UI_WIDTH));
+  pangolin::CreatePanel("ui").SetBounds(0.0, 1.0, 0.0, pangolin::Attach::Pix(UI_WIDTH));
 
   while (!pangolin::ShouldQuit()) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
