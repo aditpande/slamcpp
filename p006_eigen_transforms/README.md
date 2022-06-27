@@ -40,3 +40,19 @@ make
 
 ./p006_robot_transforms     # running the executable
 ```
+
+#### Build using Ninja (Faster build)
+
+```bash
+sudo apt install ninja-build
+# build the project
+cd slamcpp/p006_robot_transforms
+chmod +x setup.sh
+./setup.sh
+mkdir build
+cd build
+cmake -GNinja ..
+ninja
+
+./p006_robot_transforms     # running the executable
+```
