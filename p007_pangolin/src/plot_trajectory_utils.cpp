@@ -14,7 +14,9 @@ void DrawTrajectory(vector<Isometry3d, Eigen::aligned_allocator<Isometry3d>> pos
 
   pangolin::OpenGlRenderState s_cam(
     pangolin::ProjectionMatrix(1024, 768, 500, 500, 512, 389, 0.1, 1000),
-    pangolin::ModelViewLookAt(0, -0.1, -1.8, 0, 0, 0, 0.0, -1.0, 0.0)
+    pangolin::ModelViewLookAt(10, -10.5, 8,
+                              0, 0, 0,
+                              0.0, 0., 1.0)
   );
 
   pangolin::View &d_cam = pangolin::CreateDisplay()
