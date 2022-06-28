@@ -26,3 +26,9 @@ ninja
 ./p007_pangolin_vizualize_geometry
 
 ```
+
+
+
+## Trajectory Data
+
+Data for the [trajectory](./data/trajectory.txt) is generated using the simulation from [PythonRobotics/AerialNavigation/](https://github.com/AtsushiSakai/PythonRobotics/tree/master/AerialNavigation/drone_3d_trajectory_following).
