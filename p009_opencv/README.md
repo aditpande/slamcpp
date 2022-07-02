@@ -1,6 +1,6 @@
-# p008_sophus_pangolin
+# p009_opencv
 
-Using sophus for transformations and pangolin for visualization
+Example of work with OpenCV
 
 ## Dependencies
 
@@ -22,16 +22,33 @@ With these instructions, Pangolin will be installed as a ```SHARED``` library. I
 
 ## Build and Run
 
-```bash
-# build the project
-cd slamcpp/p008_sophus_pangolin
-chmod +x ./setup.sh
-./setup.sh
-mkdir build
-cd build
-cmake -GNinja ..
-ninja
+### Option 1: Build opencv from source
+    ```bash
+    # build the project
+    cd slamcpp/p008_sophus_pangolin
+    chmod +x ./setup.sh
+    ./setup.sh          # to build opencv from source
+    mkdir build
+    cd build
+    cmake -GNinja ..
+    ninja
 
-# running the executable
-./p008_sophus_pangolin
-```
+    # running the executable
+    ./p008_sophus_pangolin
+    ```
+
+### Option 2: Install prebuild opencv binaries
+    ```bash
+    # build the project
+
+    sudo apt-get install libopencv*     # install opencv
+
+    cd slamcpp/p008_sophus_pangolin
+    mkdir build
+    cd build
+    cmake -GNinja ..
+    ninja
+
+    # running the executable
+    ./p008_sophus_pangolin
+    ```

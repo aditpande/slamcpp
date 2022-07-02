@@ -1,11 +1,17 @@
 #pragma once
 
 #include <ctime>
-#include <iostream>
 #include <fstream>
-#include <vector>
+#include <iostream>
 #include <string>
+#include <vector>
 
-#include <thread>
 #include <chrono>
-#define  usleep(usec)   std::this_thread::sleep_for(std::chrono::microseconds(usec))
+#include <thread>
+#define usleep(usec)                                                           \
+  std::this_thread::sleep_for(std::chrono::microseconds(usec))
+
+#include <Eigen/Core>
+
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
