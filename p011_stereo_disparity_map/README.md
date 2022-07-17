@@ -1,6 +1,6 @@
 # p011_stereo_disparity_map
 
-Image undistortion
+Calculate disparity map from stereo images.
 
 ## Dependencies
 
