@@ -56,16 +56,13 @@ void viewer::showPointCloud(
     d_cam.Activate(s_cam);
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
-    glPointSize(5);
+    glPointSize(2);
     glBegin(GL_POINTS);
     for (auto &p : pointcloud) {
       glColor3f(p[3], p[3], p[3]);
       glVertex3d(p[0]*scale, p[1]*scale, p[2]*scale);
-      // cout << p[3] << endl;
-
     }
     glEnd();
-    // cout << pointcloud.size() << endl;
     pangolin::FinishFrame();
     usleep(1000); // sleep 5 ms
   }
